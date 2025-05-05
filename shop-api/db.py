@@ -1,10 +1,14 @@
+import os
+from dotenv import load_dotenv
 import mysql.connector
+
+load_dotenv()  # Load variables from .env file
 
 def get_connection():
     return mysql.connector.connect(
-        host="shop-db.c7c22480exdf.eu-west-1.rds.amazonaws.com",
-        user="admin",
-        password="Muhirwajd1!",
-        database="shop"
+        host=os.getenv("DB_HOST"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME")
     )
 
