@@ -1,4 +1,6 @@
-```markdown
+# To visit the URL Click on this link:
+[link text](http://18.203.67.253:8000/docs) 
+
 # 🛒 Shop API – FastAPI + MySQL (AWS RDS)
 
 This project is a simple REST API built using **FastAPI** and connected to a **MySQL database on AWS RDS**. It allows querying useful business data like top customers, monthly sales, and more.
@@ -41,19 +43,6 @@ Test them easily in the Swagger UI: `/docs`
 
 ---
 
-## 📂 Folder Structure
-
-```
-
-shop-api/
-├── main.py              # Main FastAPI app
-├── db.py                # DB connection config
-├── .env                 # Environment variables (hidden)
-├── requirements.txt     # Python dependencies
-├── shop-queries.sql     # SQL to create and seed DB
-└── README.md            # This file
-
-````
 
 ---
 
@@ -67,67 +56,20 @@ DB_HOST=your-db-name.rds.amazonaws.com
 DB_USER=admin
 DB_PASSWORD=yourpassword
 DB_NAME=shop
-````
-
----
-
+```
 ## ▶️ How to Start the App (on EC2)
-
-```bash
+```
 # Activate your environment
 source .venv/bin/activate
 
 # Start the API on port 8000
 uvicorn main:app --host 0.0.0.0 --port 8000
+
 ```
 
-To keep it running in the background:
-
-```bash
+### To keep it running in the background:
+```
 tmux new -s api
 uvicorn main:app --host 0.0.0.0 --port 8000
 # Then press CTRL+B then D to detach
 ```
-
----
-
-## 📸 Screenshots
-
-Find all screenshots for database setup, queries, and API responses in the `screenshots/` folder.
-
----
-
-## 📤 Deployment Notes
-
-* The EC2 instance must allow inbound traffic on port **8000**.
-* The RDS MySQL DB must allow the EC2 to connect (correct VPC, SG, credentials).
-* Use `tmux` or `screen` to keep the app running in background.
-
----
-
-## 🧑‍🏫 Facilitator Notes
-
-Dear facilitator,
-You can access the API live via the Swagger UI link above and run the different GET endpoints as listed.
-Let me know if login or DB access is needed — I'm happy to provide.
-
----
-
-````
-
-### ✅ What to do next:
-
-1. Create the file:
-   ```bash
-   vi README.md
-````
-
-2. Paste the content and save (`:wq`)
-
-3. Commit it:
-
-   ```bash
-   git add README.md
-   git commit -m "Add project README"
-   git push
-   ```
