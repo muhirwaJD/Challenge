@@ -1,7 +1,3 @@
-Here’s your full `README.md` file, ready to copy-paste or create in your project:
-
----
-
 ```markdown
 # 🛒 Shop API – FastAPI + MySQL (AWS RDS)
 
